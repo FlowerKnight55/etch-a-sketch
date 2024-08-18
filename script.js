@@ -1,7 +1,7 @@
 
 const container = document.querySelector(".container");
 const button = document.querySelector("button");
-
+let opacityPercentage = 10;
 
 function generateBoxes(numberOfBoxes){
 
@@ -38,15 +38,29 @@ function generateBoxes(numberOfBoxes){
 function changeColor(event){
     let target = event.target;
     
-    if(target.tagName === "DIV"){
-        target.style.backgroundColor = "blue";
+    const colorPallete = ["#756AB6", "#E0AED0", "#FFE5E5", "#F7EFE5", "#E2BFD9", "#C8A1E0", "#674188"];
+
+    let colorSelector = Math.floor(Math.random() * 6);
+
+
+    let color = window.getComputedStyle(target).backgroundColor;
+
+    console.log(color);
+
+    if(target.tagName === "DIV" && color === "rgba(0, 0, 0, 0)"){
+        target.style.backgroundColor = colorPallete[colorSelector];
+        target.style.opacity = opacityPercentage + "%";
+
+        if(opacityPercentage <= 100){
+            opacityPercentage += 10;
+        }
     }
     
 }
 
 
 function getUserInput(){
-
+    opacityPercentage = 0;
     container.innerHTML = '';
     const numberOfBoxes = prompt("Enter the number of grid: ");
 
