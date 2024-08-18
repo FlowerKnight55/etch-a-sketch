@@ -2,7 +2,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Reem Kufi Ink", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
 }
+
+body{
+    background-color: #AC87C5;
+    
+}
+
+
+
+.container{
+    background-color: white;
+    border: 1px solid #AC87C5;
+    
+}
+
+button{
+    background-color: #E0AED0;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #E0AED0;
+}
+
+
 
 html, body{
   
@@ -32,7 +59,7 @@ button{
     
     width: 800px;
     height: 800px;
-    border: 1px solid black;
+    
 }
 
 
