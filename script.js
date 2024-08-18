@@ -21,7 +21,7 @@ function generateBoxes(numberOfBoxes){
         row.style.height = size + "px";
         for(let j = 1; j <=numberOfBoxes; j++){
 
-            border = document.createElement("nav");
+            border = document.createElement("div");
             border.classList.add("border");
 
             border.style.width = size + "px";
@@ -53,15 +53,12 @@ function changeColor(event){
     const colorPallete = ["#756AB6", "#E0AED0", "#FFE5E5", "#F7EFE5", "#E2BFD9", "#C8A1E0", "#674188"];
 
     let colorSelector = Math.floor(Math.random() * 6);
-
-
     let color = window.getComputedStyle(target).backgroundColor;
 
 
+    if(target.tagName === "DIV" && color === "rgba(0, 0, 0, 0)" && target.className !== "row" && target.className !== "border"){
 
-    if(target.tagName === "DIV" && color === "rgba(0, 0, 0, 0)"){
-
-        console.log(target);
+         console.log(target);
         
         target.style.backgroundColor = colorPallete[colorSelector];
 
