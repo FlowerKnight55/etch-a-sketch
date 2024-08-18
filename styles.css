@@ -8,16 +8,17 @@
     color: white;
 }
 
+
+/* Appearance */
 body{
     background-color: #AC87C5;
     
 }
 
 
-
 .container{
     background-color: white;
-    border: 1px solid #AC87C5;
+    border: 1px solid black;
     
 }
 
@@ -27,9 +28,20 @@ button{
     border-radius: 10px;
     border-style: solid;
     border-color: #E0AED0;
+    cursor: pointer;
+}
+
+.border{
+    border: 1px solid black;
+    
+}
+
+.row{
+    border: 1px solid black;
 }
 
 
+/* Layout */
 
 html, body{
   
@@ -66,10 +78,5 @@ button{
 .row{
     display: flex;
     width: 800px;
-    
 }
 
-.column{
-    border: 1px solid black;
-    
-}
