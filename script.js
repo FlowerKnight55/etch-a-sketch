@@ -3,6 +3,8 @@ const container = document.querySelector(".container");
 const button = document.querySelector("button");
 let opacityPercentage = 10;
 
+
+//Generates Boxes based on the user
 function generateBoxes(numberOfBoxes){
 
     let row;
@@ -44,6 +46,8 @@ function generateBoxes(numberOfBoxes){
 
 }
 
+
+//Random colors generates when hovering in boxes.
 function changeColor(event){
     let target = event.target;
     const colorPallete = ["#756AB6", "#E0AED0", "#FFE5E5", "#F7EFE5", "#E2BFD9", "#C8A1E0", "#674188"];
@@ -72,7 +76,7 @@ function changeColor(event){
     
 }
 
-
+//Get user input and resets all box
 function getUserInput(){
     opacityPercentage = 0;
     container.innerHTML = '';
